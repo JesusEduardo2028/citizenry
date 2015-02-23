@@ -14,7 +14,6 @@ gem "rails-i18n"
 # gem "sqlite3-ruby", :require => "sqlite3"
 gem 'pg'
 gem "mysql2", "~> 0.3.15"
-gem 'activerecord-mysql-adapter'
 
 group :assets do
   gem "sass-rails", "~> 3.2.3"
