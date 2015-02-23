@@ -40,14 +40,13 @@
 # * Starting a console with: rails console production
 # * Starting a server with: rails server -e production
 # * Running a rake task with: rake RAILS_ENV=production ...
-
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: citizenry_production
-  pool: 5
-  username: citizenry
-  password:
+  database: citizenry
+  username: root
+  password: root
+  encoding: utf8
+  adapter: mysql2
+
 # The "development" environment is optimized for those developing the
 # software and reloads code as it's modified. It is used when:
 # * Starting a console with: rails console

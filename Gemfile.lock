@@ -191,7 +191,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pg (0.18.1)
     polyglot (0.3.4)
     rack (1.4.5)
     rack-cache (1.2)
@@ -338,7 +337,6 @@ DEPENDENCIES
   paper_trail (~> 2)
   paper_trail_manager
   paperclip (~> 2.3)
-  pg
   rack-jsonp (~> 1.2.0)
   rails (~> 3.2.11)
   rails-i18n
