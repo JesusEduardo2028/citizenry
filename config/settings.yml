@@ -1,0 +1,69 @@
+# environent-specific settings will be deep merged with the common hash, overriding values therein
+
+common:
+  # Language locale to use, see http://en.wikipedia.org/wiki/ISO_639-1 for list of valid names. The locale is used to lookup a file with the matching name, e.g. translation file "config/locales/en.yml" for locale "en":
+  locale: en
+  # Timezone to use by default, run `bundle exec rake time:zones:all` to list valid names:
+  time_zone: 'Pacific Time (US & Canada)'
+  # The OmniAuth Providers to use for authentication
+  #
+  # If you remove any of these, you may want to comment our the corresponding "omniauth-<name>" gems in the Gemfile
+  providers:
+    - twitter
+    - open_id
+    - google
+    - yahoo
+    - facebook
+    - linkedin
+    - github
+    - foursquare
+  auth_credentials:
+    twitter:
+      key: skeletonkey
+      secret: seekrit!
+    facebook:
+      key: skeletonkey
+      secret: seekrit!
+    linkedin:
+      key:
+      secret: seekrit!
+  # Sometimes, you'll need to specify the location of your CA certs. Try first without.
+  # ssl_ca_path: "/etc/ssl/certs"
+  google_analytics_id: <your id>
+  hoptoad: seekrit!
+  secret_token: c63463de2c67e13400b5ee30329a12e6d95df8e7a24112c4420ceb0b540829cdcfa48cd1d54d9dff3cc89c552013cf9f5aab7dd2539291d9355bc2069367bafe
+  session_cookie_key: _your_app_session
+  organization:
+    name: Org Name
+    city: City
+    state: State
+    url: http://domain.org
+    twitter: popular_tweeter
+    email: admin@domain.org
+    host: host
+    host_url: host@domain.com
+    logotype: <span>e</span>Logo
+  mailer:
+    # delivery specific settings should be set in environment configs below
+    # (you don't want to send out real emails in tests, do you?)
+    default_from: contact@domain.localhost
+  search: sql
+  mentoring: false # enables experimental mentor matching features
+
+development:
+  auth_credentials:
+    github:
+      key: developmentkey
+      secret: devseekrit!
+  mailer:
+    # passed to ActionMailer (overrides values in config/environments/*.rb)
+    # http://edgeguides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
+    raise_delivery_errors: false # ActionMailer::Base.raise_delivery_errors = false
+    #delivery_method: :smtp       # ActionMailer::Base.delivery_method = :smtp
+    #smtp_settings:               # ActionMailer::Base.smtp_settings = { ... }
+    #  domain: domain.org
+    #  address: smtp.domain.org
+    #  port: 25
+    #  user_name: smtp_user
+    #  password: smtp_password
+    #  authentication: plain
