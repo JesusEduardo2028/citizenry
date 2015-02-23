@@ -9,7 +9,7 @@ gem "rails-i18n"
 #     export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 #
 # Note: the exact path to your MySQL lib/ directory may vary.
-gem "mysql2", "~> 0.3.15"
+
 # Uncomment if you"re using sqlite
 # gem "sqlite3-ruby", :require => "sqlite3"
 
@@ -18,6 +18,11 @@ group :assets do
   gem "coffee-rails", "~> 3.2.1"
   gem "uglifier", ">=1.0.3"
   gem 'compass-rails'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem "hoptoad_notifier"
@@ -88,6 +93,7 @@ group :development, :test do
   gem "simplecov", :require => false
   gem "nifty-generators"
   gem "rspec-rails", ">= 2.6.0"
+  gem "mysql2", "~> 0.3.15"
 end
 
 group :test do

@@ -60,7 +60,6 @@ module Citizenry
     # Force application to not access the DB or load models when precompiling
     # assets. Heroku requires this to be false
     config.assets.initialize_on_precompile = false
-
     # Middleware!
     config.middleware.use Rack::JSONP
   end
